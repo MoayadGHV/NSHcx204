@@ -1,0 +1,5 @@
+addi x6, x0, 1
+addi x10, x0, 4
+addi x5, x5, 0x031
+sll x6, x6, x10
+xor x5, x5, x6
