@@ -1,13 +1,14 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /home/nsh1/Xilinx/Vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto d0505272a4df4296a0f5518476780d22 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot reg_file_tb_behav xil_defaultlib.reg_file_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /home/nsh1/Xilinx/Vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto d0505272a4df4296a0f5518476780d22 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot alu_tb_behav xil_defaultlib.alu_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/nsh1/cx204/lab6/lab6/lab6.srcs/sources_1/new/alu.sv" Line 1. Module alu doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.reg_file
-Compiling module xil_defaultlib.reg_file_tb
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot reg_file_tb_behav
+Built simulation snapshot alu_tb_behav

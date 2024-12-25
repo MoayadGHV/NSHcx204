@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir /home/nsh1/cx204/lab6/lab6/lab6.sim/sim_1/behav/xsim/xsim.dir/alu_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Wed Dec 25 12:05:05 2024" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Wed Dec 25 15:10:53 2024" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2019.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2552052" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "LIN64" -context "software_version_and_target_device"
@@ -14,11 +14,11 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "be6bd9fe-f6be-4d23-aa28-1a72b68254f0" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "d0505272a4df4296a0f5518476780d22" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "3" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "13" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Ubuntu" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "Ubuntu 24.04.1 LTS" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "13th Gen Intel(R) Core(TM) i7-1370P" -context "user_environment"
-webtalk_add_data -client project -key cpu_speed -value "400.179 MHz" -context "user_environment"
+webtalk_add_data -client project -key cpu_speed -value "1124.158 MHz" -context "user_environment"
 webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
 webtalk_add_data -client project -key system_ram -value "33.000 GB" -context "user_environment"
 webtalk_register_client -client xsim
@@ -34,10 +34,10 @@ webtalk_add_data -client xsim -key Debug -value "typical" -context "xsim\\comman
 webtalk_add_data -client xsim -key Simulation_Image_Code -value "25 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Simulation_Image_Data -value "3 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Total_Processes -value "19" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Total_Processes -value "18" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "3" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip unimacro_ver unisims_ver " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "0.49_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "206292_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 2897851740 -regid "" -xml /home/nsh1/cx204/lab6/lab6/lab6.sim/sim_1/behav/xsim/xsim.dir/alu_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/nsh1/cx204/lab6/lab6/lab6.sim/sim_1/behav/xsim/xsim.dir/alu_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/nsh1/cx204/lab6/lab6/lab6.sim/sim_1/behav/xsim/xsim.dir/alu_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "0.48_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "206672_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 1132317912 -regid "" -xml /home/nsh1/cx204/lab6/lab6/lab6.sim/sim_1/behav/xsim/xsim.dir/alu_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/nsh1/cx204/lab6/lab6/lab6.sim/sim_1/behav/xsim/xsim.dir/alu_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/nsh1/cx204/lab6/lab6/lab6.sim/sim_1/behav/xsim/xsim.dir/alu_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
