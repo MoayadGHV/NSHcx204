@@ -37,7 +37,7 @@ module alu #(
       // SRA
       4'b1101: ALU_out = $signed(op1) >>> op2;
       //default
-      default: ALU_out = 0;
+      default: ALU_out = 4'd0;
     endcase
 
     if (ALU_out == 32'd0) begin

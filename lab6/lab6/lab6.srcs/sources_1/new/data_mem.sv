@@ -34,7 +34,6 @@ module data_mem #(int WIDTH = 32) (
     always @(posedge clk, negedge reset_n) begin
         if(~reset_n) begin 
             foreach(dataFF[i]) dataFF[i]='b0;
-            dataFF[1] = dataFF[1] | 1;
         end else if(mem_write) begin
             dataFF[addr] = wdata;
         end

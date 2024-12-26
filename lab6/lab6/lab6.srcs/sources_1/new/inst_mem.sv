@@ -29,12 +29,12 @@ module inst_mem #(parameter WIDTH = 32)(
     
     initial begin
     
-        $readmemb("/home/nsh1/cx204/support_files/fib_im.mem", instructions); // CHANGE DIR BEFORE STARTING
+        $readmemh("/home/nsh1/cx204/support_files/insts_2.mem", instructions); // CHANGE DIR BEFORE STARTING
         
     end
     
     always_comb begin
-        instruction = instructions[address];
+        instruction = instructions[address/4];
     end
     
     

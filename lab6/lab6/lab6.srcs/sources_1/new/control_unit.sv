@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
 
 module control_unit (
-    input [6:0] opcode,          // 7-bit opcode from the instruction
-    input fun7,                   // 5th bit of the funct7 field
-    input [2:0] fun3,             // funct3 field
+    input [6:0] opcode,
+    input [2:0] func3,
+    input [6:0] func7,            
     output logic reg_write,       // Enables writing data to register
     output logic mem_write,       // Enables writing data to memory
     output logic mem_to_reg,      // Selects data source for writing back to register
@@ -27,8 +27,8 @@ module control_unit (
     // Instantiate the ALU Control Unit
     alu_control u_alu_control (
         .alu_op(alu_op),
-        .fun7(fun7),
-        .fun3(fun3),
+        .fun7(func7),
+        .fun3(func3),
         .alu_ctrl(alu_ctrl)
     );
 

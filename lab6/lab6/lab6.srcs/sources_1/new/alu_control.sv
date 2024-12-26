@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 
 module alu_control (
-    input [1:0] alu_op,           // ALU operation signal from the Main Control Unit
-    input fun7,                    // 5th bit of the funct7 field
-    input [2:0] fun3,              // funct3 field
-    output logic [3:0] alu_ctrl    // 4-bit ALU control signal
+    input [6:0] fun7,                   
+    input [2:0] fun3, 
+    input [1:0] alu_op,             
+    output logic [3:0] alu_ctrl
 );
 
     always_comb begin

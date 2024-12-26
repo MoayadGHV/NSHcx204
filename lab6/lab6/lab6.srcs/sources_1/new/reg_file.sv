@@ -27,25 +27,29 @@ module reg_file(
     output logic [31:0] rdata1, rdata2
     );
     
-    logic [31:0] reg_arr [0:4];
+    logic [31:0] reg_arr [0:31];
     
     
     always @(posedge clk, negedge reset_n) begin
         if (~reset_n) begin
-            for (int i = 1; i < 5; i++) begin
+            for (int i = 0; i < 32; i++) begin
                 reg_arr[i] = 32'd0;
             end
         end else begin  
-            if (~reg_write) begin
-                rdata1 = reg_arr[raddr1];
-                rdata2 = reg_arr[raddr2];
-            end
             
             if (reg_write) begin
                 reg_arr[waddr] = wdata;
             end
+            
         end
     end
+    
+    
+
+    assign rdata1 = reg_arr[raddr1];
+    assign rdata2 = reg_arr[raddr2];
+        
+    
     
     
 endmodule
