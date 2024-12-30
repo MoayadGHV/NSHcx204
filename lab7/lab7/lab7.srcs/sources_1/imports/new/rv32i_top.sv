@@ -6,8 +6,7 @@ module rv32i_top (
 );
 
     // Signals for control unit outputs
-    logic reg_write, mem_write, mem_to_reg, alu_src, branch;
-    logic [1:0] alu_op;
+    logic reg_write, mem_write, zero, less, mem_to_reg, alu_src, branch;
     logic [3:0] alu_ctrl;
 
     // Signals for data path inputs and outputs
@@ -19,10 +18,11 @@ module rv32i_top (
         .opcode(opcode),
         .func3(func3),
         .func7(func7),
+        .zero(zero),
+        .less(less),
         .reg_write(reg_write),
         .mem_write(mem_write),
         .mem_to_reg(mem_to_reg),
-        .alu_op(alu_op),
         .alu_src(alu_src),
         .branch(branch),
         .alu_ctrl(alu_ctrl)
@@ -40,7 +40,9 @@ module rv32i_top (
         .branch(branch),
         .opcode(opcode),
         .func3(func3),
-        .func7(func7)
+        .func7(func7),
+        .zero(zero),
+        .less(less)
     );
 
 endmodule

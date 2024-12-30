@@ -7,14 +7,16 @@ module data_path (
    input memtoreg,
    input alu_src,
    input [3:0] alu_ctrl,
+   input pc_sel,
    input branch,
    output logic [6:0] opcode,
    output logic [2:0] func3,
-   output logic [6:0] func7
+   output logic [6:0] func7,
+   output logic zero, less
 );
 
     logic [31:0] next_pc, current_pc, instruction, imm, reg_wdata, reg_rdata1, reg_rdata2, alu_op2, mem_rdata, pc_plus4, pc_jump, alu_result;
-    logic zero, pc_sel;
+
     
     program_counter pc(
         clk, 
@@ -57,7 +59,8 @@ module data_path (
         alu_op2, 
         alu_ctrl, 
         alu_result, 
-        zero
+        zero,
+        less
     );
     
     data_mem datamem(

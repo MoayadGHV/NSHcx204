@@ -3,16 +3,18 @@
 module control_unit (
     input [6:0] opcode,
     input [2:0] func3,
-    input [6:0] func7,            
+    input [6:0] func7,
+    input zero, less,            
     output logic reg_write,       // Enables writing data to register
     output logic mem_write,       // Enables writing data to memory
     output logic mem_to_reg,      // Selects data source for writing back to register
-    output logic [1:0] alu_op,    // ALU operation control
     output logic alu_src,         // ALU operand source (immediate or register)
     output logic branch,          // Indicates branch instruction
-    output logic [3:0] alu_ctrl   // 4-bit ALU control signal
+    output logic [3:0] alu_ctrl,   // 4-bit ALU control signal
+    output logic pcSel
 );
-
+    logic [1:0] alu_op;
+    
     // Instantiate the Main Control Unit
     main_control u_main_control (
         .opcode(opcode),
@@ -31,5 +33,14 @@ module control_unit (
         .fun3(func3),
         .alu_ctrl(alu_ctrl)
     );
-
+    
+    
+    branch_controller branchctrl (
+        func3,
+        branch,
+        zero,
+        less,
+        pcSel
+    );
+        
 endmodule

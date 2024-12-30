@@ -5,7 +5,8 @@ module alu #(
     input [WIDTH-1:0] op2,
     input [3:0] ALU_sel,
     output logic [WIDTH-1:0] ALU_out,
-    output logic ZERO
+    output logic ZERO, 
+    output logic LESS
 );
 
   always @(op1, op2) begin
@@ -37,12 +38,17 @@ module alu #(
       // SRA
       4'b1101: ALU_out = $signed(op1) >>> op2;
       //default
-      default: ALU_out = 4'd0;
+      default: ALU_out = 4'b1001;
     endcase
 
     if (ALU_out == 32'd0) begin
       ZERO = 1;
     end else ZERO = 0;
+    
+    if (op1 < op2) begin
+        LESS = 1;
+    end else LESS = 0;
+    
   end
 
 endmodule

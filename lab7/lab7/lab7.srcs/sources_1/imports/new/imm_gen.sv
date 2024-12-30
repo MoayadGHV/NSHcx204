@@ -40,6 +40,15 @@ module imm_gen #(parameter WIDTH = 32)(
             
             7'b1100011:
                 imm = {{19{inst[31]}}, inst[7], inst[30:25], inst[11:8], 1'b0};
+                
+            7'b0110111:
+                imm = {inst[31:12], {12{1'b0}}};
+            
+            7'b0010111:
+                imm = {inst[31:12], {12{1'b0}}};
+                
+            7'b1101111:
+                imm = {inst[31:12], {12{1'b0}}};
             default: begin
                 imm = 32'b0;
             end
